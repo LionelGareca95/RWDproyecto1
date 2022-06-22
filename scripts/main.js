@@ -1,4 +1,4 @@
-// Declaraciones 
+// Declaraciones
     const d = document;
     const menuBtn = d.querySelector('nav .btn');
     const menuLst = d.querySelector('nav .menu');
@@ -6,15 +6,13 @@
     const mapFrm = d.querySelector('#map');
     let cN = 'active';
 
-// Navegacion 
+// Navegacion
+    menuBtn.onclick = () => menuLst.classList.toggle(cN)
 
-menuBtn.onclick = () => menuLst.classList.toggle('cN')
-
-// Mapa de Contacto
-
-mapBtn.addEventListener('click', () => {
-    // condicion ? valor V : valor FA
-    mapFrm.classList.toggle(cN) ?
-    mapBtn.classList.replace('icon-max', 'icon-min') :
-    mapBtn.classList.replace('icon-min', 'icon-max')
-} )
+// Mapa de contacto
+    mapBtn.addEventListener( 'click',() => { 
+        // condicion ? valor V : valor F
+        mapFrm.classList.toggle(cN) ?
+            mapBtn.classList.replace('icon-max','icon-min') :
+            mapBtn.classList.replace('icon-min','icon-max')
+    } )
